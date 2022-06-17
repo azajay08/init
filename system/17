@@ -1,0 +1,19 @@
+#Find the command that allows you to connect via ssh on the VM.
+#(In parallel with the graphic session)
+
+ssh <user>@<IPaddress>
+
+#I had to use another machine to install debian so for that I had to connect via ssh a different
+#way. In the new debian I created, I had to go and change the Network settings from NAT to 
+#Bridge adapter. Providing I installed the ssh server on the install, on the debian I had
+#to find out the IP of the debian machine I am using by typing 'hostname -I' into the terminal
+#which in this case gives '10.11.199.26' then I need to type 'sudo service ssh start' to start
+#the service. Then on iTerm I can connect by typing 'ssh ajones@10.11.199.26'
+
+#ssh -p 2222 127.0.0.1
+
+#^^This is how I done it on another machine
+#'127.0.0.1' is the local host address
+#My username on the debian is the same as my hive username so I can write it like this.
+#If my username was different, I would have to write it like this 'ssh -p 2222 ajones@127.0.0.1'
+#I configured a port 2222, in the VM settings to connect to the default ssh port '22'

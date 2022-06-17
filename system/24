@@ -1,0 +1,6 @@
+#Find the command that list all packages
+
+apt list --installed
+
+#This will show all the installed packages, but if you want to view
+#all the packages, just take off the '--installed'

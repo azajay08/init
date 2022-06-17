@@ -1,0 +1,307 @@
+#!/bin/bash
+
+clear 
+
+score=0
+
+RED='\033[1;31m'
+GR='\033[1;32m'
+WT='\033[1;37m'
+CY='\033[1;36m'
+BK='\033[1;30m'
+PP='\033[1;35m'
+YW='\033[1;33m'
+NL='\033[0m'
+BG='\033[1;42m'
+BR='\033[1;41m'
+BY='\033[1;43m'
+QUES='\033[4;1;45m'
+
+echo -e "\n\n\n\t${YW}Hello there, my name is ${WT}Aaron2.0${YW}, what is your name?${NL}\n\n\n"
+read name 
+sleep 1
+echo -e "\n\n\t${YW}Hello there ${WT}$name${YW}, it is a pleasure to meet you."
+sleep 1
+# Yes or No question
+while true; do
+echo -e "\n\n\n${YW}I have prepared a small quiz for you, would you like to take part[Y/N]?${NL}\n\n\n"
+read yn
+clear
+sleep 0.3
+case $yn in
+	Yes|yes|Y|y|YES )
+	echo -e "\n\n\n\t${CY}WELCOME ${YW}$name${CY} to this special... ${NL}\n\n"
+	sleep 1.5
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+	echo -e "\n\n"
+	sleep 2
+	echo -e "${PP}I am going to be asking you a series of questions.\n"
+	sleep 2
+	echo -e "This is a multiple choice quiz, with 4 options ${BK}${BY}A${NL}, ${BK}${BY}B${NL}, ${BK}${BY}C${NL}, ${BK}${BY}D${NL}\n"
+	echo -e "${PP}If you don't answer with one of the 4 options, you will be prompted to try again\n"
+	echo -e "For every ${GR}correct${PP} answer,you get ${GR}1 ${PP}point.\n"
+	echo -e "If you guess ${RED}incorrectly${PP}, you get ${RED}0 ${PP}points for that question.\n"
+	echo -e "\nOnly full marks will be rewarded with a ${YW}GOLD ${PP}star, and if you"
+	echo -e "don't get full marks, you get a big fat ${RED}thumbs down${PP}"
+	sleep 1
+	echo -e "\n\nReady ${CY}$name${PP}?${YW}(press enter to continue)${NL}"
+	read anyanswer
+	clear
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+	sleep 1
+# Question 1
+	while true; do
+		echo -e "\n\n\n${NL}${QUES}Question 1.${NL}\n"
+		echo -e "\t${PP}Where is Aaron${WT}1.0${PP} from?\n\n"
+		sleep 1
+		echo -e "\t${BK}${BY} A.IRELAND ${NL} \t${BK}${BY} B.ENGLAND ${NL} \t${BK}${BY} C.SCOTLAND ${NL} \t${BK}${BY} D.WALES ${NL}\n\n"
+		read answ1
+		clear
+		echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+		echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+		echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+		echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+		echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+		echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+		echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+		case $answ1 in
+		B|b )
+		sleep 1
+		echo -e "\n\n\n\t${GR}√  Well Done ! 1 Point!${NL}"
+		score=$((score + 1))
+		break ;;
+		A|a|C|c|D|d ) echo -e "\n\n\n\t${RED}X  Nooooo!, Aaron1.0 is from ENGLAND! 0 Points!${NL}"
+		break ;;
+		* ) echo -e "\a\n\n\n${RED}Please answer with either A, B, C, or D${NL}";;
+	esac
+	done
+	sleep 2
+	echo -e "\n${YW}So far your score is : $score"
+	sleep 2
+	echo -e "\n\n\n${NL}${QUES}Next Question .....${NL}"
+	sleep 2
+	clear
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+# Question 2
+	while true; do
+		echo -e "\n\n\n${NL}${QUES}Question 2.${NL}\n"
+		echo -e "\t${PP}What is the Capital of Australia?\n\n"
+		sleep 1
+		echo -e "\t${BK}${BY} A.LONDON ${NL}\t${BK}${BY} B.SYDNEY ${NL}\t${BK}${BY} C.CANBERRA ${NL}\t${BK}${BY} D.PARIS ${NL}\n\n"
+		read answ2
+		clear
+		echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+		echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+		echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+		echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+		echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+		echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+		echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+		case $answ2 in
+		C|c )
+		sleep 1
+		echo -e "\n\n\n\t${GR}√  Well Done ! 1 Point!${NL}"
+		score=$((score + 1))
+		break ;;
+		A|a|B|b|D|d ) echo -e "\n\n\n\t${RED}X  Oh Nooo :( it Canberra! 0 Points!${NL}"
+		break ;;
+		* ) echo -e "\a\n\n\n${RED}Please answer with either A, B, C, or D${NL}";;
+	esac
+	done
+	sleep 2
+	echo -e "\n${YW}So far your score is : $score"
+	sleep 2
+	echo -e "\n\n\n${NL}${QUES}Next Question .....${NL}"
+	sleep 2
+	clear
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+# Question 3
+	while true; do
+		echo -e "\n\n\n${NL}${QUES}Question 3.${NL}\n"
+		echo -e "\t${PP}Which musical artist was the singer behind the famous song"
+		echo -e "\tof the Rick Roll(Never Gonna Give You Up)?\n\n"
+		sleep 1
+		echo -e "\t${BK}${BY} A.RICK JAMES ${NL}\t${BK}${BY} B.RICKY MARTIN ${NL}\t${BK}${BY} C.RICK ASTLEY ${NL}\t${BK}${BY} D.RICKON STARK ${NL}\n\n"
+		read answ3
+		clear
+		echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+		echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+		echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+		echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+		echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+		echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+		echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+		case $answ3 in
+		C|c )
+		sleep 1
+		echo -e "\n\n\n\t${GR}√  Well Done ! 1 Point!${NL}"
+		score=$((score + 1))
+		break ;;
+		A|B|D|a|b|d ) echo -e "\n\n\n\t${RED}X  Nooooo! Rick Astley the genius, is the correct answer, 0 Points!${NL}"
+		break ;;
+		* ) echo -e "\a\n\n\n${RED}Please answer with either A, B, C, or D${NL}";;
+	esac
+	done
+	sleep 2
+	echo -e "\n${YW}So far your score is : $score"
+	sleep 2
+	echo -e "\n\n\n${NL}${QUES}Next Question .....${NL}"
+	sleep 2
+	clear
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+# Question 4
+	while true; do
+		echo -e "\n\n\n${NL}${QUES}Question 4.${NL}\n"
+		echo -e "\t${PP}How many bonus points will you give Aaron${WT}1.0${PP}?\n\n"
+		sleep 1
+		echo -e "\t${BK}${BY} A.5 ${NL}\t${BK}${BY} B.5 ${NL}\t${BK}${BY} C.5 ${NL}\t${BK}${BY} D.5 ${NL}\n\n"
+		read answ4
+		clear
+		echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+		echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+		echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+		echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+		echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+		echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+		echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+		case $answ4 in
+		A|B|C|D|a|b|c|d )
+		sleep 1
+		echo -e "\n\n\n\t${GR}√  Well Done ! 1 Point!${NL}"
+		score=$((score + 1))
+		break ;;
+		0 ) echo -e "\n\n\n\t${RED}X  Savage! 0 Points!${NL}"
+		break ;;
+		* ) echo -e "\a\n\n\n${RED}Try again, you can't get this one wrong ;)${NL}"
+	esac
+	done
+	sleep 2
+	echo -e "\n${YW}So far your score is : $score"
+	sleep 2
+	clear
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+# Question 5
+	echo -e "\n\n\n${NL}${QUES}Last Question .....${NL}"
+	sleep 2
+	while true; do
+		echo -e "\n\n\n${QUES}Question 5.${NL}\n"
+		echo -e "\t${PP}What is the meaning of life?\n\n"
+		sleep 1
+		echo -e "\t${BK}${BY} A.Money ${NL}\t${BK}${BY} B.Love ${NL}\t${BK}${BY} C.Ramen ${NL}\t${BK}${BY} D.42 ${NL}\n\n"
+		read answ5
+		clear
+		echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+		echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+		echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+		echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+		echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+		echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+		echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${PP}"
+		case $answ5 in
+		D|d ) 
+		sleep 1
+		echo -e "\n\n\n\t${GR}√  Well Done ! 1 Point!${NL}"
+		score=$((score + 1))
+		break ;;
+		A|B|C|a|b|c ) echo -e "\n\n\n\t${RED}X  Nooooo! C'mon, you should know this! 0 Points!${NL}"
+		break ;;
+		* ) echo -e "\a\n\n\n${RED}Please answer with either A, B, C, or D${NL}";;
+	esac
+	done
+	sleep 2
+	clear
+	echo -e "\n${YW}And your final score is......"
+	sleep 2
+	echo -e "\n$score Points!"
+	sleep 2
+	echo -e "\n${PP}That means you get .....${NL}"
+	sleep 3
+	clear
+	if [ "$score" != 5 ]
+	then
+		echo -e "\n${RED}  ______"
+		echo -e "(( ____ \- "
+		echo -e "(( _____  "
+		echo -e "((_____  "
+		echo -e "((____   ---- "
+		echo -e "     /  / "
+		echo -e "    (_(( ${NL}"
+		sleep 1
+		echo -e "\n\n${RED}You can do better than this!${NL}"
+	else
+		echo -e "\n${YW}        ."
+		echo -e "       ,O, "
+		echo -e "      ,OOO, "
+		echo -e "'oooooOOOOOooooo' "
+		echo -e "  'OOOOOOOOOOO' "
+		echo -e "    'OOOOOOO' "
+		echo -e "    OOOO'OOOO "
+		echo -e "   OOO'   'OOO "
+		echo -e "  O'         'O \n${NL}"
+		sleep 1
+		echo -e "\n\n${YW}CONGRATULATIONS! You are a GENIUS!${NL}"
+	fi
+	while true; do
+	echo -e "\n\n${PP}Would you like to try again[Y/N]?${NL}"
+	read yn
+	case $yn in
+	Y|y|Yes|YES|yes ) ./03
+	break ;;
+	N|NO|No|no|n ) 
+	clear
+	echo -e "\n\n\t${PP}Thanks for playing the ...${NL}\n\n\n"
+	echo -e "${YW}  ______  ${CY}   __  __  ${PP}   ________   ${RED}  ______     "
+	echo -e "${YW} /_____/\  ${CY} /_/\/_/\ ${PP}  /_______/\  ${RED} /_____/\    "
+	echo -e "${YW} \:::_ \ \  ${CY}\:\ \:\ \ ${PP} \__.::._\/  ${RED} \:::__\/    "
+	echo -e "${YW}  \:\ \ \ \_ ${CY}\:\ \:\ \ ${PP}   \::\ \     ${RED}  /: /     "
+	echo -e "${YW}   \:\ \ /_ \ ${CY}\:\ \:\ \ ${PP}  _\::\ \__   ${RED}/::/___   "
+	echo -e "${YW}    \:\_-  \ \ ${CY}\:\_\:\ \ ${PP}/__\::\__/\ ${RED}/_:/____/\ "
+	echo -e "${YW}     \___|\_\_/ ${CY}\_____\/${PP} \________\/ ${RED}\_______\/ ${NL}\n\n"
+	break ;;
+	* ) 
+	clear
+	echo -e "\a\n\n\t${RED}Please answer Yes/No or Y/N.${NL}";;
+	esac
+	done
+	break ;;
+	No|no|N|n|NO ) echo -e "\n\n\n\t${RED}What, really? Fine then, see ya!${NL}, no more nice colours for you.\n\n\n\n"
+		exit;;
+	* ) echo -e "\a\n\n\t${RED}Please answer Yes/No or Y/N.${NL}";;
+esac
+done

@@ -1,0 +1,11 @@
+# Use the output of the previous command to 
+# find the name and IP address of the device that makes
+# the link between you (local network) and the outside world
+
+The NAT server 
+
+#nat (10.60.1.1)
+
+#Using 'traceroute who.int | grep 'nat'' we can get just the answer
+#Network Address Translation (NAT) is designed for IP address conservation. 
+#It enables private IP networks that use unregistered IP addresses to connect to the Internet.

@@ -1,0 +1,5 @@
+#What command can you use to rename your system?
+
+sudo hostnamectl set-hostname <newhost>
+
+#newhost is an example

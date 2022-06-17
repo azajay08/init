@@ -1,0 +1,4 @@
+#2.Identify and display the Ethernet interface characteristics:
+#2b.Identify all IP adresses which are part of the same subnet
+
+ping -c 2 10.11.255.255 | grep 'from ' | awk '{print $4}' | sed 's/://'

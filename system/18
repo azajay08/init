@@ -1,0 +1,8 @@
+#Find the command that kills ssh service
+
+systemctl stop ssh
+
+#This will ask for a password, when you then check the status of ssh,
+#'systemctl status ssh', we can then see that it is inactive (dead)
+#then can reboot with 'systemctl restart ssh'
+#Can also use 'sudo service ssh stop'

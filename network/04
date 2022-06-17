@@ -1,0 +1,8 @@
+#Identifiy the default gateway in the routing table
+
+netstat -nr | grep default | head -1
+
+#A gateway is a node or a router that acts as an access point to 
+#pass networkk data from local netwroks to remote networks.
+#-n Show numerical addresses instead of trying to determine
+#symbolic host, port or username, -r Displays kernel routing tables

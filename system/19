@@ -1,0 +1,11 @@
+#List all services which are started at boot time and name this kind of services
+
+systemctl list-unit-files
+
+#This will list everything, however the ones that say 'enabled' are the ones
+#that have been booted from the start. The 'disabled' have not.
+#You can show the list for only those that are 'enabled' with ..
+#'systemctl list-unit-files --state=enabled --all'
+
+#These services are called 'daemons'. A daemon is a program that runs in the
+#background

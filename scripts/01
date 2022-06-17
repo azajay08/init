@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo -e "Login\t\t\tUID\t\tPath\n"
+cat /etc/passwd | awk -F: '{print $1 "\r\t\t\t" $3 "\r\t\t\t\t\t"  $6}'

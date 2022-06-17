@@ -1,0 +1,5 @@
+#Name the command that lists the partition tables of drives?
+
+lsblk
+
+#I also tried it with 'sudo fdisk -l', it asks for password and then displays, but the 'lsblk' command looks to be more clear

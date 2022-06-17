@@ -1,0 +1,22 @@
+#!/bin/bash
+
+echo -e "Active users:\n"
+users
+echo -e "\nReal user:\n"
+cat /etc/passwd | grep '/home' | awk -F: '{print $1 " "}' | tr -d "\n"
+echo -e "\n\nPlease enter the name of the user you wish to delete:"
+read user
+while true; do
+	echo -e "\a\nAre you sure you want to delete '$user' from this system?[Y/N]"
+	read yn
+	case $yn in
+		Yes|yes|Y|y|YES )
+		sudo killall -u $user
+		sudo userdel -rf $user
+		echo -e "\nUser: $user has been deleted\n"
+		break;;
+		No|NO|no|N|n ) echo -e "\nNo user has been deleted\n"
+			exit;;
+		* ) echo -e "\a\nPlease answer Yes/No or Y/N";;
+	esac
+done

@@ -1,0 +1,6 @@
+# Make the intra.42.fr address reroute to 46.19.122.85
+
+46.19.122.85 intra.42.fr
+
+# We need write '46.19.122.85 intra.42.fr' to '/etc/hosts' although
+# we do not have access rights to do so 

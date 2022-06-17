@@ -1,0 +1,9 @@
+#What file contains the RSA keys of systems that are authorized to connect via SSH?
+
+~/.ssh/authorized_keys
+
+#I generated a key with 'ssh-keygen -t rsa',
+#then in the '.ssh' directory, there were 2 new files. 'id_rsa' and 'id_rsa.pub.
+#I then used the command 'ssh-copy-id username@remote_host' in my case ...
+#'ssh-copy-id ajones@debian', I then went through the prompts and then the 
+#authorized_keys file was created automatically.

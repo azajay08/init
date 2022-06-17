@@ -1,0 +1,5 @@
+#What file has to be modified to make it permanent?
+
+/etc/hostname
+
+#You need to edit this file, but need admin privelages

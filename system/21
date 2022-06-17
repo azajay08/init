@@ -1,0 +1,11 @@
+#List all real users on the VM
+
+cat /etc/passwd | grep '/home' | awk -F: '{print $1}'
+
+#From the list of users, ones that have 'home' in the path
+#are real users.
+#You can also list them by narrowing down the users UID's
+#All the real users UID's are over 1000. There is one user
+#called "nobody" that deamons use so you can just exclude that
+#if you were to view it that way. That command would look like ..
+#'cat /etc/passwd | awk -F: '$3 >=1000  && $1 != "nobody" {print $1}''

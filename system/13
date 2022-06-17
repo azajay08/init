@@ -1,0 +1,6 @@
+#Name the command that find, in real time, currently running processes
+
+top
+
+#At first I used 'ps aux' but that did not give you info in real time, whereas 
+#'top' does. It provies a dynamic real-time view of the running system

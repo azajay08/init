@@ -1,0 +1,7 @@
+#Find the provider of who.int
+
+Cloudflare
+
+#With nslookup who.int we can find the address '104.17.113.188'
+#then we can run the 'whois 104.17.113.188' command to find info 
+#or you coud use 'dig -x 104.17.113.188'

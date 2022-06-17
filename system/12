@@ -1,0 +1,8 @@
+#Figure out the exact size of each folder of /var in a humanly understandable way 
+#followed by the path of it.
+
+sudo du -hsc /var/*
+
+#'du' estimates file space. We need rights to access folder, hence the sudo.
+#'-h' human readable. '-s' displays total size of specified directory and not files, 
+#'-c' gives a grand total, not necessary but nice to know

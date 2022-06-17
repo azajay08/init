@@ -1,0 +1,7 @@
+#Find the command that add a new local user
+
+sudo adduser <newuser>
+
+#You would add the new username in the <newuser>
+#It will then ask for the password and then to add
+#details for that user, password, name etc.

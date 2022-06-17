@@ -1,0 +1,16 @@
+#Explain how connect yourself as new user. (With graphic session and ssh session)
+
+With graphic session, you just select or enter the user you want to log in as
+then enter the password for that user.
+If you want to a new user, you can just go to settings and create and new user
+from there.
+
+For the ssh session, you use the same instrcutons form question 17.
+Enter'ssh <login>@<ip>' into iTerm for example, providing that the
+port has been configured this way. It will then ask for the users password and then 
+the session is set up.
+In this instance it would be 'ssh ajones@10.11.199.26'
+You can then connect yourself as other users by typing 'ssh <login>@<ip>' or 
+'ssh <login>@<remote host>' in my case.. 'ssh user2@debian'
+The first time I logged in this way, it asked if you are sure you want to continue connecting,
+if you type 'yes' it will then ask for password of that user and then you are in.

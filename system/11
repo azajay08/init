@@ -1,0 +1,7 @@
+#Name the command that displays the available space left and used on the system
+#in an humanly understandable way
+
+df -H
+
+#This shows the correct info, I originally used '-h' flag which means human readable but '-H'
+#displays it to the power of 1000, so it looks more clear

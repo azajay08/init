@@ -1,0 +1,7 @@
+# Find the IP that was assigned to you by dhcp server
+
+# yiaddr = your IP address, The IP address to be used by the client meaning us.
+
+ipconfig getpacket en0 | grep 'yiaddr'
+
+# The computer I was using at the time gave out '10.11.6.6', this can be used in the next question

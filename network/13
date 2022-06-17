@@ -1,0 +1,6 @@
+# Thanks to the previous question and the reverse DNS find the name of your host
+
+# Using the answer from the previos question we get '10.11.6.6' on the computer I was on a the time
+# if I then type 'host 10.11.6.6' I will get the answer: 6.6.11.10.in-addr.arpa domain name pointer c1r6p6.hive.fi.
+
+c1r6p6.hive.fi.

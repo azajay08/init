@@ -1,0 +1,8 @@
+#Find the command that kills the background command’s process
+
+kill -9 `jobs -l | grep 'tail -f ' | awk '{print $2}'`
+
+#With the 'jobs -l | grep 'tail -f ' | awk '{print $2}' criteria, we can find the 
+#PID. With the PID, we can kill the process with 'kill -9'. This will kill the 
+#process of whatever is inside of '`  `'
+#Can also use 'sudo kill $!', this will kill whatever was the previous process
